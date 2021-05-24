@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Dice roller</string>
     <string name="roll">Roll</string>
+    <string name="dice_image_that_shows_the_roll_result">Dice image that shows the roll result</string>
+    <string name="main_title">Hammer-Frog Roller</string>
+    <string name="button_main">Go to dice page</string>
 </resources>

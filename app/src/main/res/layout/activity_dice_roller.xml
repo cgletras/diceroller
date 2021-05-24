@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/bv_main"
+    android:layout_margin="15dp"
+    android:backgroundTint="#7AC7E67F"
+    app:cardCornerRadius="30dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".DiceRollActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"
+        android:text="In this screen you will roll your attributes. 4 sided dices will be rolled and the 3 higher values will be sum and listed as a result"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp">
+
+        <ImageView
+            android:id="@+id/dice_image1"
+            android:layout_width="174dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/dice_image_that_shows_the_roll_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty_dice"
+            tools:src="@drawable/empty_dice" />
+
+        <ImageView
+            android:id="@+id/dice_image2"
+            android:layout_width="174dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/dice_image_that_shows_the_roll_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty_dice"
+            tools:src="@drawable/empty_dice" />
+
+        <ImageView
+            android:id="@+id/dice_image3"
+            android:layout_width="174dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/dice_image_that_shows_the_roll_result"
+            app:layout_constraintStart_toStartOf="@id/dice_image1"
+            app:layout_constraintTop_toBottomOf="@id/dice_image1"
+            app:srcCompat="@drawable/empty_dice"
+            tools:src="@drawable/empty_dice" />
+
+        <ImageView
+            android:id="@+id/dice_image4"
+            android:layout_width="174dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/dice_image_that_shows_the_roll_result"
+            app:layout_constraintEnd_toEndOf="@id/dice_image2"
+            app:layout_constraintTop_toBottomOf="@id/dice_image2"
+            app:srcCompat="@drawable/empty_dice"
+            tools:src="@drawable/empty_dice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/roll" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textStyle="bold|italic"
+        android:text="Result"/>
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold|italic"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:text="0"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
